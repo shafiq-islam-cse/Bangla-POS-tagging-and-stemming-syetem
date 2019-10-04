@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Task intro: Bangla POS tagging and stemming syetem
+Tips: Increase your data file xlxs for more word
 Created on Fri Oct  4 22:33:52 2019
 
 @author: Shafiq, Faculty,FSKKP,University Malaysia Pahang 
