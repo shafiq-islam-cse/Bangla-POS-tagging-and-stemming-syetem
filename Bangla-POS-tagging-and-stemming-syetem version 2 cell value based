@@ -1,5 +1,4 @@
 
-
 """
 Todo: if a word is verb then do task of finding tense form otherwise dont need to do that
 
@@ -44,7 +43,7 @@ for i in range(sheet.nrows):
         
 for i in range(sheet.nrows):
     #print("Current Row number i is ",i)
-    #columns = []
+    #columns = [] 
 #    rows = [] 
     for j in range(sheet.ncols):
         #print("Current Column number j is ",j)
@@ -54,8 +53,7 @@ for i in range(sheet.nrows):
         #print("Individual value at ",i,j,"is = ",v)
         if text[0]==v:
            print(text[0],"  is found at location row,column=",i,j)
-           print(text[0],"is a ",sheet.cell(i,c-1).value,sheet.cell(0,c-1).value)
-           
+           print(text[0]," শব্দটি " , sheet.cell(i,c-1).value,"",sheet.cell(0,c-1).value," , ", sheet.cell(i,c-2).value," ",sheet.cell(0,c-2).value," , ", sheet.cell(i,c-3).value," ",sheet.cell(0,c-3).value)      
            #print("Column ",j," is =",columns)
         #rows.append(columns)
 #        rows = []
@@ -163,4 +161,5 @@ for i in range(sheet.nrows):
 #
 #print(df.head())
        
+        
         
