@@ -1,1 +1,166 @@
 
+
+"""
+Todo: if a word is verb then do task of finding tense form otherwise dont need to do that
+
+Task intro: Bangla POS tagging and stemming syetem
+Created on Fri Oct  4 22:33:52 2019
+
+@author: Shafiq, Faculty,FSKKP,University Malaysia Pahang 
+"""
+
+# Program extracting first column 
+import xlrd 
+#textinput="ক্রিয়া"
+textinput="ভাত"
+##textinput="খাইতেছিলাম"
+##textinput="আমি"
+##textinput="ভাত"
+
+text=textinput.split()
+print("text[0] :",text[0])
+
+loc = ("f.xlsx") 
+  
+wb = xlrd.open_workbook(loc) 
+sheet = wb.sheet_by_index(0) 
+sheet.cell_value(0, 0) 
+
+r=sheet.nrows
+c=sheet.ncols
+rows=[]
+columns=[]
+print("*****************")
+#
+#for i in range(r): 
+#    print(sheet.cell_value(i, 0))
+#    columns.append(sheet.cell(i, j).value)
+#   
+col=[] 
+for i in range(sheet.nrows):
+    for j in range(sheet.ncols):
+        v=sheet.cell(i, j).value
+        print("Individual value at ",i,j,"is = ",v)
+        
+for i in range(sheet.nrows):
+    #print("Current Row number i is ",i)
+    #columns = []
+#    rows = [] 
+    for j in range(sheet.ncols):
+        #print("Current Column number j is ",j)
+        #columns.append(sheet.cell(i, j).value)
+        
+        v=sheet.cell(i, j).value
+        #print("Individual value at ",i,j,"is = ",v)
+        if text[0]==v:
+           print(text[0],"  is found at location row,column=",i,j)
+           print(text[0],"is a ",sheet.cell(i,c-1).value,sheet.cell(0,c-1).value)
+           
+           #print("Column ",j," is =",columns)
+        #rows.append(columns)
+#        rows = []
+#print("Col:",col)  
+#print("Columns",columns)
+#print("Columns 0",columns[0])
+#print("\n Row \n",rows)  
+#print("\n Row 0\n",rows[0]) 
+#print("\n Row 0 0 \n",rows[0][0])   
+#print("\n Row 0 0 0\n",rows[0][0][0])    
+#    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+#import xlrd
+#
+#workbook = xlrd.open_workbook("f.xlsx","rb")
+#sheet = workbook.sheet_by_index(0)
+#rows = []
+#columns = []
+#for i in range(sheet.nrows):
+#    #print("Current Row number i is ",i)
+#    #columns = []
+#    for j in range(sheet.ncols):
+#        #print("Current Column number j is ",j)
+#        columns.append(sheet.cell(i, j).value)
+#        #print("Column ",j," is =",columns)
+#    rows.append(columns)
+#    
+#print("sheet.nrows",sheet.nrows)
+#print("sheet.ncols",sheet.ncols)
+#r=sheet.nrows
+#c=sheet.ncols
+# 
+##print("Rows are:\n")
+##print(rows)
+##print("Columns are:\n")
+##print(columns)
+##print("********")
+#
+#print("Column are using loop")
+#for i in range(c):
+#     print("Col",i,"is = ",columns[i])
+#     
+#print("Row value using loop :")
+#for i in range(r):
+#    print("Row",i,"is = ",rows[i])
+##     print("row value:")
+##     print("Row 0:",rows[0])
+##     print("Row 1:",rows[1])
+##     print("Row 2:",rows[2])
+##     print("Row 00:",rows[0][0])# first elemet of the row
+#
+#
+#textinput="ভাত"
+##textinput="খাইতেছিলাম"
+##textinput="আমি"
+##textinput="ভাত"
+##textinput="ক্রিয়া"
+#text=textinput.split()
+#print("text[0] :",text[0])
+#
+##for w in range(r):
+##    if text[0] in rows[w]:
+##        print("Item ",text[0] ,"is found in row no    ****",w)
+##    else: 
+##       print("Item is not found")
+#
+#
+#
+#for w in range(r):
+#    if textinput in rows[w]:
+#       #if columns[w] in textinput:
+#       print("Item is found in column no ****",w)
+#       print("Item ",text[0] , "is a ",rows[0][w])
+#       print("Item ",text[0] , "is a person",rows[2][c-1])
+#       print("Item ",text[0] , "is a number",rows[2][c-2])
+#       print("Normal form of the word",text[0]," is",columns[1])
+#       print("\n")
+#
+#    else: 
+#       print("Item is not found")
+#       print()
+
+#from pandas import read_excel
+## find your sheet name at the bottom left of your excel file and assign 
+## it to sheet_name
+#my_sheet = 'Sheet1'
+#file_name = 'BanglaPOStagging.xlsx' # name of your excel file
+#df = read_excel(file_name, sheet_name = my_sheet)
+#
+#print(df.head())
+       
+        
